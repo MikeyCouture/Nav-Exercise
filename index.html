@@ -8,13 +8,13 @@
     <title>Nav Exercises</title>
   </head>
   <body>
-    <header class="header">
+    <header id="head" class="header">
       <nav>
         <ul
           class="list
         "
         >
-          <li><a href="" class="nav_link">Home</a></li>
+          <li><a href="#head" class="nav_link">Home</a></li>
           <li><a href="#section1" class="nav_link">About</a></li>
           <li><a href="#section2" class="nav_link">Blog</a></li>
           <li><a href="#section3" class="nav_link">Contact Us</a></li>
@@ -85,8 +85,8 @@
 </html>
 
 <script>
+  // Smooth Scroll Behaviour
   const list = document.querySelector(".list");
-
   list.addEventListener("click", function(e) {
     if (e.target.classList.contains("nav_link")) {
       e.preventDefault();
@@ -94,4 +94,30 @@
       document.querySelector(id).scrollIntoView({ behavior: "smooth" });
     }
   });
+
+  //Intersection Observer API
+
+  const header = document.querySelector(".header");
+  const navHeight = document
+    .querySelector(".header nav")
+    .getBoundingClientRect().height;
+  const nav = document.querySelector(".header nav");
+
+  const stickyNav = function(entries) {
+    const [entry] = entries;
+    console.log(entry);
+    if (!entry.isIntersecting) {
+      nav.classList.add("sticky");
+    } else {
+      nav.classList.remove("sticky");
+    }
+  };
+
+  const Observer = new IntersectionObserver(stickyNav, {
+    root: null,
+    threshold: 0,
+    rootMargin: `-${navHeight}px`
+  });
+
+  Observer.observe(header);
 </script>

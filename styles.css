@@ -12,7 +12,7 @@ body {
 
 nav {
   height: 70px;
-  width: auto;
+  width: 100%;
   background-color: #475c6c;
 }
 
@@ -71,4 +71,8 @@ nav .list li a {
 .footer {
   background-color: #475c6c;
   height: 200px;
+}
+
+.sticky {
+  position: fixed;
 }
