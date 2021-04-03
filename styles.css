@@ -1,0 +1,74 @@
+body {
+  margin: 0px;
+}
+
+.banner {
+  background-image: url("./images/brooke-lark.jpeg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+}
+
+nav {
+  height: 70px;
+  width: auto;
+  background-color: #475c6c;
+}
+
+nav .list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  height: 100%;
+  align-content: space-around;
+  width: auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+
+nav .list li a {
+  color: #fff;
+}
+
+#section1 {
+  height: 500px;
+  background-color: #cd8b62;
+  width: 100%;
+  display: block;
+}
+
+#section1 div,
+#section2 div,
+#section3 div {
+  width: 60%;
+  margin: auto;
+  height: 300px;
+  display: block;
+}
+
+#section1 div p,
+#section2 div p,
+#section3 div p {
+  display: inline-block;
+}
+
+#section2 {
+  height: 600px;
+  background-color: #eed7a1;
+  width: 100%;
+  display: block;
+}
+
+#section3 {
+  height: 550px;
+  background-color: #f7efd2;
+  width: 100%;
+  display: block;
+}
+
+.footer {
+  background-color: #475c6c;
+  height: 200px;
+}

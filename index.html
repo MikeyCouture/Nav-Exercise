@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="styles.css" />
     <title>Nav Exercises</title>
   </head>
   <body>
@@ -13,10 +14,10 @@
           class="list
         "
         >
-          <li><a href="">Home</a></li>
-          <li><a href="">About</a></li>
-          <li><a href="">Blog</a></li>
-          <li><a href="">Contact Us</a></li>
+          <li><a href="" class="nav_link">Home</a></li>
+          <li><a href="#section1" class="nav_link">About</a></li>
+          <li><a href="#section2" class="nav_link">Blog</a></li>
+          <li><a href="#section3" class="nav_link">Contact Us</a></li>
         </ul>
       </nav>
       <div class="banner"></div>
@@ -83,75 +84,14 @@
   </body>
 </html>
 
-<style>
-  body {
-    margin: 0px;
-  }
+<script>
+  const list = document.querySelector(".list");
 
-  .banner {
-    background-image: url("./images/brooke-lark.jpeg");
-    background-position: bottom;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 400px;
-  }
-
-  nav {
-    height: 70px;
-    width: auto;
-    background-color: thistle;
-  }
-
-  nav .list {
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
-    height: 100%;
-    align-content: space-around;
-    width: auto;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-  }
-
-  #section1 {
-    height: 500px;
-    background-color: #cd8b62;
-    width: 100%;
-    display: block;
-  }
-
-  #section1 div,
-  #section2 div,
-  #section3 div {
-    width: 60%;
-    margin: auto;
-    height: 300px;
-    display: block;
-  }
-
-  #section1 div p,
-  #section2 div p,
-  #section3 div p {
-    display: inline-block;
-  }
-
-  #section2 {
-    height: 500px;
-    background-color: #eed7a1;
-    width: 100%;
-    display: block;
-  }
-
-  #section3 {
-    height: 500px;
-    background-color: #f7efd2;
-    width: 100%;
-    display: block;
-  }
-
-  .footer {
-    background-color: #475c6c;
-    height: 150px;
-  }
-</style>
+  list.addEventListener("click", function(e) {
+    if (e.target.classList.contains("nav_link")) {
+      e.preventDefault();
+      const id = e.target.getAttribute("href");
+      document.querySelector(id).scrollIntoView({ behavior: "smooth" });
+    }
+  });
+</script>
