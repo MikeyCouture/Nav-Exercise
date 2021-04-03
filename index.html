@@ -19,9 +19,10 @@
           <li><a href="">Contact Us</a></li>
         </ul>
       </nav>
+      <div class="banner"></div>
     </header>
     <main>
-      <section class="section1">
+      <section id="section1" class="section">
         <div>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi odio
@@ -33,7 +34,50 @@
           </p>
         </div>
       </section>
-      <section class="section2"></section>
+      <section id="section2" class="section">
+        <div>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi odio
+            augue, suscipit sit amet auctor at, euismod placerat est. Aliquam
+            erat volutpat. Duis est sem, tempus vitae tempus eu, venenatis ac
+            nunc. Etiam dictum, sapien eget pretium molestie, augue elit feugiat
+            felis, id congue urna ipsum ultrices ex. Proin dapibus purus at erat
+            pellentesque
+          </p>
+        </div>
+        <div>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi odio
+            augue, suscipit sit amet auctor at, euismod placerat est. Aliquam
+            erat volutpat. Duis est sem, tempus vitae tempus eu, venenatis ac
+            nunc. Etiam dictum, sapien eget pretium molestie, augue elit feugiat
+            felis, id congue urna ipsum ultrices ex. Proin dapibus purus at erat
+            pellentesque
+          </p>
+        </div>
+      </section>
+      <section id="section3" class="section">
+        <div>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi odio
+            augue, suscipit sit amet auctor at, euismod placerat est. Aliquam
+            erat volutpat. Duis est sem, tempus vitae tempus eu, venenatis ac
+            nunc. Etiam dictum, sapien eget pretium molestie, augue elit feugiat
+            felis, id congue urna ipsum ultrices ex. Proin dapibus purus at erat
+            pellentesque
+          </p>
+        </div>
+        <div>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi odio
+            augue, suscipit sit amet auctor at, euismod placerat est. Aliquam
+            erat volutpat. Duis est sem, tempus vitae tempus eu, venenatis ac
+            nunc. Etiam dictum, sapien eget pretium molestie, augue elit feugiat
+            felis, id congue urna ipsum ultrices ex. Proin dapibus purus at erat
+            pellentesque
+          </p>
+        </div>
+      </section>
     </main>
     <footer class="footer"></footer>
   </body>
@@ -42,6 +86,14 @@
 <style>
   body {
     margin: 0px;
+  }
+
+  .banner {
+    background-image: url("./images/brooke-lark.jpeg");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
   }
 
   nav {
@@ -60,5 +112,46 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
+  }
+
+  #section1 {
+    height: 500px;
+    background-color: #cd8b62;
+    width: 100%;
+    display: block;
+  }
+
+  #section1 div,
+  #section2 div,
+  #section3 div {
+    width: 60%;
+    margin: auto;
+    height: 300px;
+    display: block;
+  }
+
+  #section1 div p,
+  #section2 div p,
+  #section3 div p {
+    display: inline-block;
+  }
+
+  #section2 {
+    height: 500px;
+    background-color: #eed7a1;
+    width: 100%;
+    display: block;
+  }
+
+  #section3 {
+    height: 500px;
+    background-color: #f7efd2;
+    width: 100%;
+    display: block;
+  }
+
+  .footer {
+    background-color: #475c6c;
+    height: 150px;
   }
 </style>
